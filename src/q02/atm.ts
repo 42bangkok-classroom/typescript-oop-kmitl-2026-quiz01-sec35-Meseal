@@ -6,7 +6,7 @@ const balance = Number(inputBalanceString);
 const amount = Number(inputAmountString);
 
 
-if (isNaN(balance) || isNaN(amount) || balance < 0 || amount < 0 || !amount || !balance) {
+if (isNaN(balance) || isNaN(amount)) {
     console.log("Invalid Input");
     process.exit(1);
 }
@@ -16,7 +16,6 @@ if (amount > balance) {
 } else if (amount > WITHDRAWAL_LIMIT) {
     console.log("Exceeds per-withdrawal limit");
 } else {
-    const newBalance: number = balance - amount;
     console.log("Withdrawal approved");
 }
 
