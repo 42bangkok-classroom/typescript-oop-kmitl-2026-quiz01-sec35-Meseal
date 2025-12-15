@@ -6,7 +6,7 @@ const balance = Number(inputBalanceString);
 const amount = Number(inputAmountString);
 
 
-if (isNaN(balance) || isNaN(amount) || balance < 0 || amount <= 0) {
+if (isNaN(balance) || isNaN(amount) || balance < 0 || amount < 0 || !amount || !balance) {
     console.log("Invalid Input");
     process.exit(1);
 }
